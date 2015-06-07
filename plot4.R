@@ -13,7 +13,7 @@ data$DateTime = strptime(paste(data$Date, data$Time), "%Y-%m-%d %H:%M:%S")
 
 png("plot4.png", width=480, height=480)
 par(mfrow=c(2,2))
-plot(data$DateTime, data$Global_active_power, xlab= "", ylab="Global Active Power(kilowatts)", type="l")
+plot(data$DateTime, data$Global_active_power, xlab= "", ylab="Global Active Power", type="l")
 plot(data$DateTime, data$Voltage, xlab= "datetime", ylab="Voltage", type="l")
 plot(data$DateTime, c(data$Sub_metering_1), xlab= "", ylab="Energy sub metering", type="l")
 lines(data$DateTime, data$Sub_metering_2, col = "red")
